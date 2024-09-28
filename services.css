@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(61, 124, 179);
+    --secondary-color: rgb(214, 223, 232);
+    --text-dark: rgb(47, 53, 58);
+    --text-light: rgb(129, 119, 92);
+    --max-width: 1200px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Old Standard TT', serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: rgb(21, 140, 225);
+   
+}
+
+.nav__logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.1rem;
+    
+    
+}
+
+.nav__links {
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+.nav__links .link a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+.display__container {
+    background-color: var(--secondary-color);
+    padding: 20px;
+}
+
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.section__title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section__subtitle {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.display__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.display__card img {
+    width: 100%;
+}
+
+footer {
+    background-color: var(--text-light);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 20px;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+footer p {
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .nav__links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        transition: left 0.3s;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .nav__links.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .display__grid {
+        grid-template-columns: 1fr; /* Stack cards in a single column */
+    }
+}

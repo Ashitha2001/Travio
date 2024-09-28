@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travio - Travel Experiences</title>
+    <link rel="stylesheet" href="services.css">
+</head>
+<body>
+    <nav>
+        <div class="nav__logo"><a href="./index.html">Travio.com</a></div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav__links" id="nav-menu">
+            <li class="link"><a href="./index.html">Home</a></li>
+            <li class="link"><a href="./login.html">Login</a></li>
+            <li class="link"><a href="./blog.html">Blog</a></li>
+            <li class="link"><a href="./offers.html">Offers</a></li>
+            <li class="link"><a href="./contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <section class="display__container">
+        <div class="section__container">
+            <h2 class="section__title">Why Choose Us</h2>
+            <p class="section__subtitle">
+                Choose us for expertly curated travel experiences, personalized itineraries, exclusive discounts, and dedicated support—your adventure starts here!
+            </p>
+            <div class="display__grid">
+                <div class="display__card">
+                    <img src="images/img8.jpg" alt="Scenic view of a hill" />
+                </div>
+                <div class="display__card">
+                    <h4>Passionate Travel</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="display__card">
+                    <img src="images/img7.jpg" alt="Image representing adventure travel" />
+                </div>
+                <div class="display__card">
+                    <img src="images/img9.jpg" alt="Beautiful landscape view" />
+                </div>
+                <div class="display__card">
+                    <h4>Beautiful Places</h4>
+                    <p>The world is full of new things to explore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="section__container">
+            <h4>Travio.com</h4>
+            <p>Travel makes one modest. You see what a tiny place you occupy in the world.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const navMenu = document.getElementById("nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

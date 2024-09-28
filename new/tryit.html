@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <div class="tryit">
+        <img src="images/img0.jpg" alt="name" />
+        
+</head>
+<link rel="stylesheet" href="./css/styles.css">
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "prashob") {
+    alert("already esists");
+    return false;
+  }
+}
+function validateForm() {
+  let x = document.forms["myForm"]["fnum"].value;
+  if (x == "10") {
+    alert("enter 10 digit number");
+    return false;
+
+}
+}
+
+function validateForm() {
+  let x = document.forms["myForm"]["fmail"].value;
+  if (x == "@gmail.com") {
+    alert("use valid format");
+    return false;
+
+}
+}
+
+</script>
+</head>
+<body>
+
+<h2>Contact Validation</h2>
+
+<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+     mobileMenu: <input type="number" name="fnum">
+      gmail: <input type="email" name="fmail">
+    <input type="submit" value="Submit">
+</for

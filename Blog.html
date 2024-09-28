@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travio</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <nav>
+    <div class="nav__logo"><a href="./index.html">Travio.com</a></div>
+    <ul class="nav__links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./login.html">Login</a></li>
+      <li><a href="./Offers.html">Offers</a></li>
+      <li><a href="./Services.html">Services</a></li>
+      <li><a href="./Contacts.html">Contacts</a></li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <section class="journey__container">
+    <div class="section__container">
+      <h2 class="section__title">Start Your Journey</h2>
+      <p class="section__subtitle">The most searched Places</p>
+      <div class="journey__grid">
+        <div class="place__card">
+          <img src="./images/img0.jpg" alt="Munnar, Kerala">
+          <div class="place__name">
+            <span>Munnar, Kerala</span>
+          </div>
+        </div>
+        <div class="place__card">
+          <img src="./images/img7.jpg" alt="Kanyakumari, Kerala">
+          <div class="place__name">
+            <span>Kanyakumari, Kerala</span>
+          </div>
+        </div>
+        <div class="place__card">
+          <img src="./images/img3.jpg" alt="Alleppey, Kerala">
+          <div class="place__name">
+            <span>Alleppey, Kerala</span>
+          </div>
+        </div>
+        <div class="place__card">
+          <img src="./images/img4.jpg" alt="Trivandrum, Kerala">
+          <div class="place__name">
+            <span>Trivandrum, Kerala</span>
+          </div>
+        </div>
+        <div class="place__card">
+          <img src="./images/img2.jpg" alt="Kannur, Kerala">
+          <div class="place__name">
+            <span>Kannur, Kerala</span>
+          </div>
+        </div>
+        <div class="place__card">
+          <img src="./images/img3.jpg" alt="Thrissur, Kerala">
+          <div class="place__name">
+            <span>Thrissur, Kerala</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="section__container">
+      <h4>Travio.com</h4>
+      <p>Travel makes one modest. You see what a tiny place you occupy in the world.</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav__links");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

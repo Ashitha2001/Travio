@@ -1,0 +1,151 @@
+:root {
+  --primary-color: rgb(61, 124, 179);
+  --secondary-color: rgb(214, 223, 232);
+  --text-dark: rgb(47, 53, 58);
+  --text-light: rgb(129, 119, 92);
+  --extra-light: rgb(226, 232, 245);
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Old Standard TT', serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+}
+
+.nav__logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+}
+
+.link {
+  margin-left: 2rem;
+}
+
+.link a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+.banner__container {
+  background-image: linear-gradient(rgba(35, 71, 103, 0.5), rgba(35, 71, 103, 0.5)), url("../images/img8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section__container {
+  padding: 10rem 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.banner__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  color: var(--extra-light);
+}
+
+.banner__content h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.banner__content button {
+  padding: 0.5rem 2rem;
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.banner__content button:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+footer {
+  background-color: var(--text-light);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+footer p {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .nav__links {
+      position: fixed;
+      left: -100%;
+      top: 5rem;
+      flex-direction: column;
+      background-color: var(--primary-color);
+      width: 100%;
+      border-radius: 10px;
+      transition: 0.3s;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav__links.active {
+      left: 0;
+  }
+
+  .nav__links .link {
+      margin: 1.5rem 0;
+  }
+
+  .hamburger {
+      display: flex;
+  }
+
+  .bar {
+      background-color: #fff;
+  }
+}
